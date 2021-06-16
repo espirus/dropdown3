@@ -17,8 +17,8 @@ import '@algolia/autocomplete-theme-classic';
 
 import { ProductHit } from './types';
 
-const appId = 'ID8MXCV7Z3';
-const apiKey = '874729ea72be7faf693a284a4f6dba33';
+const appId = 'latency';
+const apiKey = '6be0576ff61c053d5f9a3225e2a90f76';
 const searchClient = algoliasearch(appId, apiKey);
 
 // @ts-expect-error type error in search-insights
@@ -28,7 +28,7 @@ const algoliaInsightsPlugin = createAlgoliaInsightsPlugin({ insightsClient });
 
 const querySuggestionsPlugin = createQuerySuggestionsPlugin({
   searchClient,
-  indexName: 'RED',
+  indexName: 'instant_search',
   getSearchParams() {
     return {
       hitsPerPage: 5,
@@ -54,7 +54,7 @@ autocomplete<ProductHit>({
             searchClient,
             queries: [
               {
-                indexName: 'RED',
+                indexName: 'instant_search',
                 query,
                 params: {
                   clickAnalytics: true,
