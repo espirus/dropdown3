@@ -28,7 +28,7 @@ const algoliaInsightsPlugin = createAlgoliaInsightsPlugin({ insightsClient });
 
 const querySuggestionsPlugin = createQuerySuggestionsPlugin({
   searchClient,
-  indexName: 'images',
+  indexName: 'RED',
   getSearchParams() {
     return {
       hitsPerPage: 5,
@@ -54,7 +54,7 @@ autocomplete<ProductHit>({
             searchClient,
             queries: [
               {
-                indexName: 'images',
+                indexName: 'RED',
                 query,
                 params: {
                   clickAnalytics: true,
