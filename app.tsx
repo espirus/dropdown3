@@ -54,7 +54,7 @@ autocomplete<ProductHit>({
             searchClient,
             queries: [
               {
-                indexName: 'instant_search',
+                indexName: 'images',
                 query,
                 params: {
                   clickAnalytics: true,
