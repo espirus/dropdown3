@@ -158,12 +158,46 @@
 	   </div>
 				 
 
-		
-	
-	.jumbotron {
- background: url(path/to/image.jpg) fixed center no-repeat;
- background-size: cover;
-}	
+
+
+your css should be in <style> tag if you are adding that in .html page
+
+if you are adding that css in seperate css file then make sure image path is proper or check your console you must be getting 404 file not found error
+
+<body>
+  <div class="container-fluid">  
+     <div class="row"> 
+       <div class="col-7 left">
+        <h1> We're coming soon</h1>
+
+      Hello fellow shoppers! We're currently building our new fashion store.
+      Add your email below to stay up-to-date with announcements and our launch deals.
+
+      Email Address
+       </div>
+
+     <!-- Right side -->
+    <div class="col-5">
+      <img src="images/hero-desktop.jpg">
+    </div>
+    </div>
+   </div>
+</body>
+
+
+
+<style>
+.left{
+    background-image: url('Montage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+
+</style>
+
+
 	
 		
 		
